@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.Odbc;
 
 namespace WindowsFormsApp3
 {
@@ -20,6 +21,12 @@ namespace WindowsFormsApp3
         private void Form1_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void Login_Click(object sender, EventArgs e)
+        {
+            OdbcConnectionStringBuilder my = new OdbcConnectionStringBuilder()
+            OdbcConnection myconnection = new OdbcConnection()
         }
     }
 }
