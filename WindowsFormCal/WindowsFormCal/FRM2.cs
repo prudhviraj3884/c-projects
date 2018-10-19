@@ -166,6 +166,30 @@ namespace WindowsFormCal
             }
         }
 
+        private void buttonn7_Click(object sender, EventArgs e)
+        {
+            RESULTBOX.Text = ch + "7";
+            ch = RESULTBOX.Text;
+        }
+
+        private void buttonn8_Click(object sender, EventArgs e)
+        {
+            RESULTBOX.Text = ch + "8";
+            ch = RESULTBOX.Text;
+        }
+
+        private void buttonn9_Click(object sender, EventArgs e)
+        {
+            RESULTBOX.Text = ch + "9";
+            ch = RESULTBOX.Text;
+        }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+            RESULTBOX.Text = ch + "0";
+            ch = RESULTBOX.Text;
+        }
+
         private void CLEAR_Click(object sender, EventArgs e)
         {
             RESULTBOX.Clear();
