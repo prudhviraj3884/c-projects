@@ -253,7 +253,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.ClientSize = new System.Drawing.Size(419, 381);
+            this.ClientSize = new System.Drawing.Size(427, 408);
             this.Controls.Add(this.button9);
             this.Controls.Add(this.buttonn9);
             this.Controls.Add(this.buttonn8);
