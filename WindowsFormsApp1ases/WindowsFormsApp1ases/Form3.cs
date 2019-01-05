@@ -77,5 +77,46 @@ namespace WindowsFormsApp1ases
             dataGridView1.DataSource = ds.Tables["Table1"].DefaultView;
             con.Close();
         }
-    }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void name_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void section_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void branch_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ID_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        
+}
+}
 }

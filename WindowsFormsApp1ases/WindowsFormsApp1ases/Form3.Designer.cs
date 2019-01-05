@@ -40,20 +40,20 @@
             this.section = new System.Windows.Forms.TextBox();
             this.name = new System.Windows.Forms.TextBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this._Database1_0DataSet = new WindowsFormsApp1ases._Database1_0DataSet();
-            this.table1BindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.table1TableAdapter = new WindowsFormsApp1ases._Database1_0DataSetTableAdapters.Table1TableAdapter();
             this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.sectionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.branchDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dobDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.table1BindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this._Database1_0DataSet = new WindowsFormsApp1ases._Database1_0DataSet();
+            this.table1TableAdapter = new WindowsFormsApp1ases._Database1_0DataSetTableAdapters.Table1TableAdapter();
             this.REGISTER = new System.Windows.Forms.Button();
             this.DISPLAY = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this._Database1_0DataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.table1BindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this._Database1_0DataSet)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -65,6 +65,7 @@
             this.label1.Size = new System.Drawing.Size(53, 20);
             this.label1.TabIndex = 0;
             this.label1.Text = "IDNO";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label2
             // 
@@ -97,6 +98,7 @@
             this.label4.Size = new System.Drawing.Size(83, 20);
             this.label4.TabIndex = 3;
             this.label4.Text = "BRANCH";
+            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // label5
             // 
@@ -107,6 +109,7 @@
             this.label5.Size = new System.Drawing.Size(144, 20);
             this.label5.TabIndex = 4;
             this.label5.Text = "DATE OF BIRTH";
+            this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // ID
             // 
@@ -114,6 +117,7 @@
             this.ID.Name = "ID";
             this.ID.Size = new System.Drawing.Size(100, 20);
             this.ID.TabIndex = 5;
+            this.ID.TextChanged += new System.EventHandler(this.ID_TextChanged);
             // 
             // DOB
             // 
@@ -129,6 +133,7 @@
             this.branch.Name = "branch";
             this.branch.Size = new System.Drawing.Size(100, 20);
             this.branch.TabIndex = 7;
+            this.branch.TextChanged += new System.EventHandler(this.branch_TextChanged);
             // 
             // section
             // 
@@ -136,6 +141,7 @@
             this.section.Name = "section";
             this.section.Size = new System.Drawing.Size(100, 20);
             this.section.TabIndex = 8;
+            this.section.TextChanged += new System.EventHandler(this.section_TextChanged);
             // 
             // name
             // 
@@ -143,6 +149,7 @@
             this.name.Name = "name";
             this.name.Size = new System.Drawing.Size(100, 20);
             this.name.TabIndex = 9;
+            this.name.TextChanged += new System.EventHandler(this.name_TextChanged);
             // 
             // dataGridView1
             // 
@@ -159,20 +166,7 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(546, 202);
             this.dataGridView1.TabIndex = 10;
-            // 
-            // _Database1_0DataSet
-            // 
-            this._Database1_0DataSet.DataSetName = "_Database1_0DataSet";
-            this._Database1_0DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // table1BindingSource
-            // 
-            this.table1BindingSource.DataMember = "Table1";
-            this.table1BindingSource.DataSource = this._Database1_0DataSet;
-            // 
-            // table1TableAdapter
-            // 
-            this.table1TableAdapter.ClearBeforeFill = true;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // idDataGridViewTextBoxColumn
             // 
@@ -203,6 +197,20 @@
             this.dobDataGridViewTextBoxColumn.DataPropertyName = "dob";
             this.dobDataGridViewTextBoxColumn.HeaderText = "dob";
             this.dobDataGridViewTextBoxColumn.Name = "dobDataGridViewTextBoxColumn";
+            // 
+            // table1BindingSource
+            // 
+            this.table1BindingSource.DataMember = "Table1";
+            this.table1BindingSource.DataSource = this._Database1_0DataSet;
+            // 
+            // _Database1_0DataSet
+            // 
+            this._Database1_0DataSet.DataSetName = "_Database1_0DataSet";
+            this._Database1_0DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // table1TableAdapter
+            // 
+            this.table1TableAdapter.ClearBeforeFill = true;
             // 
             // REGISTER
             // 
@@ -260,8 +268,8 @@
             this.Text = "Form3";
             this.Load += new System.EventHandler(this.Form3_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this._Database1_0DataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.table1BindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this._Database1_0DataSet)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -38,5 +38,30 @@ namespace WindowsFormsApp1ases
                 MessageBox.Show("INVALID USERNAME OR PASSWORD");
             }
         }
+
+        private void TB2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void TB1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void LABEL2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void LABEL1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
