@@ -76,6 +76,21 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Database143DataSet2.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Database143DataSet3.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Database143DataSet3.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Database143DataSet4.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Database143DataSet4.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Database143DataSet5.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Database143DataSet5.xsd</DependentUpon>
+    </Compile>
     <Compile Include="faculty.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -182,6 +197,39 @@
     </None>
     <None Include="Database143DataSet2.xss">
       <DependentUpon>Database143DataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="Database143DataSet3.xsc">
+      <DependentUpon>Database143DataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="Database143DataSet3.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Database143DataSet3.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Database143DataSet3.xss">
+      <DependentUpon>Database143DataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="Database143DataSet4.xsc">
+      <DependentUpon>Database143DataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="Database143DataSet4.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Database143DataSet4.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Database143DataSet4.xss">
+      <DependentUpon>Database143DataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="Database143DataSet5.xsc">
+      <DependentUpon>Database143DataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="Database143DataSet5.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Database143DataSet5.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Database143DataSet5.xss">
+      <DependentUpon>Database143DataSet5.xsd</DependentUpon>
     </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

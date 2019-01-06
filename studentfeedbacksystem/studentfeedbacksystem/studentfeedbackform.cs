@@ -39,52 +39,68 @@ namespace studentfeedbacksystem
         {
             
             con.Open();
+           
+            
             int a = Convert.ToInt32(tb1.Text);
+            
             int b = Convert.ToInt32(tb2.Text);
             int c = Convert.ToInt32(tb3.Text);
             int d = Convert.ToInt32(tb4.Text);
             int f = Convert.ToInt32(tb5.Text);
             int g = Convert.ToInt32(tb6.Text);
             int h = Convert.ToInt32(tb7.Text);
+              
             int avg = (a + b + c + d + f + g + h) / 7;
-            string rating="";
-          if(avg==1)
+            if (avg <= 5)
             {
-                rating = "poor";
+                string rating = "";
+                if (avg == 1)
+                {
+                    rating = "poor";
+                }
+                else if (avg == 2)
+                {
+                    rating = "average";
+                }
+                else if (avg == 3)
+                {
+                    rating = "good";
+                }
+                else if (avg == 4)
+                {
+                    rating = "very good";
+                }
+                else if (avg == 5)
+                {
+                    rating = "excellent";
+                }
+                SqlCommand cmd1 = con.CreateCommand();
+                cmd1.CommandType = CommandType.Text;
+                cmd1.CommandText = "update  table99 set rating='" + rating + "' where facultyid='" + facultyidbox.Text + "'";
+                cmd1.ExecuteNonQuery();
+                MessageBox.Show("your feedback is recorded");
+
+                SqlCommand cmd2 = con.CreateCommand();
+                cmd2.CommandType = CommandType.Text;
+                cmd2.CommandText = "update table145 set facultyid='" + facultyidbox.Text + "' where studentid='" + studentidbox.Text + "'";
+                cmd2.ExecuteNonQuery();
+
+                SqlCommand cmd3 = con.CreateCommand();
+                cmd3.CommandType = CommandType.Text;
+                cmd3.CommandText = "update table145 set ratingsubmitted='" + rating + "' where studentid='" + studentidbox.Text + "'";
+                cmd3.ExecuteNonQuery();            
             }
-          else if(avg==2)
+            else if(avg>5)
             {
-                rating = "average";
+                MessageBox.Show("INPUT NUMBERS ARE OUT OF RANGE PLEASE ENTER AGAIN");
             }
-          else if(avg==3)
+            else
             {
-                rating = "good";
-            }
-          else if(avg==4)
-            {
-                rating = "very good";
-            }
-          else if(avg==5)
-            {
-                rating = "excellent";
+                MessageBox.Show("INPUT IS NOT IN CORRECT FORMAT");
             }
             
-            SqlCommand cmd1 = con.CreateCommand();
-            cmd1.CommandType = CommandType.Text;
-            cmd1.CommandText = "update  table99 set rating='"+rating+"' where facultyid='" + facultyidbox.Text + "'";
-            cmd1.ExecuteNonQuery();
-            MessageBox.Show("YOUR FEEDBACK YOU IS SUBMITTED SUCCESSFULLY THANK YOU");
+           
             
-            SqlCommand cmd2 = con.CreateCommand();
-            cmd2.CommandType = CommandType.Text;
-            cmd2.CommandText = "update table145 set facultyid='" + facultyidbox.Text + "' where studentid='" + studentidbox.Text + "'";
-            cmd2.ExecuteNonQuery();
-            
-            SqlCommand cmd3 = con.CreateCommand();
-            cmd3.CommandType = CommandType.Text;
-            cmd3.CommandText = "update table145 set ratingsubmitted='"+rating+"' where studentid='" + studentidbox.Text + "'";
-            cmd3.ExecuteNonQuery();
-            MessageBox.Show("your feedback is recorded");
             con.Close();
            
 
